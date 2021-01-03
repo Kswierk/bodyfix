@@ -161,7 +161,11 @@ const Navbar = (props) => {
     <>
       <StyledNav>
         <NavLogo to="/">
-          Bodyfix<LogoSpan>for programmers</LogoSpan>
+          Bodyfix
+          <LogoSpan>
+            for
+            <br /> programmers
+          </LogoSpan>
         </NavLogo>
         <div onClick={handleClick}>
           {click ? <BurgerClose /> : <BurgerLines />}
