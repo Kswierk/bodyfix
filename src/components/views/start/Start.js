@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Baner from './Baner';
+import HowToStart from './HowToStart';
 import InformationalStart from './InformationalStart';
 
 const Wraper = styled.div`
@@ -24,12 +25,13 @@ const Wraper = styled.div`
 
 const Start = () => {
   return (
-    <Wraper>
-      {/* <InformationalWraper> */}
-      <InformationalStart />
-      {/* </InformationalWraper> */}
-      <Baner />
-    </Wraper>
+    <>
+      <Wraper>
+        <InformationalStart />
+        <Baner />
+      </Wraper>
+      <HowToStart />
+    </>
   );
 };
 

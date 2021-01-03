@@ -8,16 +8,22 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
     }
 
+   html{
+     scroll-behavior: smooth;
+   }
+
     body{
+background: linear-gradient(0deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 70%);
+
+    overflow-x: hidden;
+      @media(min-width: 960px){
+
+      /* background-color: #efefef; */
       background: linear-gradient(
       90deg,
       rgba(239, 239, 239, 1) 0%,
-      rgba(255, 255, 255, 1) 40%
+      rgba(255, 255, 255, 1) 50%
     );
-      @media(min-width: 960px){
-
-      background-color: #efefef;
-      
       }
     }
 `;

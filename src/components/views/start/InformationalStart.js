@@ -43,14 +43,18 @@ const Header = styled.h1`
   }
 `;
 
-const InformationalStart = () => {
+const InformationalStart = (props) => {
+  const handleClick = () => {
+    let pageHeight = window.innerHeight;
+    window.scrollBy(0, pageHeight);
+  };
   return (
     <InformationalWraper>
       <Header>
         Sprawność fizyczna jest jednym z najważniejszych kluczy do dynamicznej i
         twórczej aktywności intelektualnej.
       </Header>
-      <Button text="Zacznij efektywniej pracować" />
+      <Button onClick={handleClick} text="Zacznij efektywniej pracować" />
     </InformationalWraper>
   );
 };
