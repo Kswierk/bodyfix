@@ -1,22 +1,22 @@
 export const MenuItems = [
   {
-    title: `Zdrowe plecy`,
-    path: '/zdrowy-kręgosłup',
+    title: `Proste plecy`,
+    path: '/back',
     cName: 'dropdown-link',
   },
   {
     title: `Sprawne nogi`,
-    path: '/zdrowe-kolana',
+    path: '/legs',
     cName: 'dropdown-link',
   },
   {
     title: `Zdrowa szyja`,
-    path: '/zdrowa-szyja',
+    path: '/neck',
     cName: 'dropdown-link',
   },
   {
     title: `Oddech mocy`,
-    path: '/oddech-mocy',
+    path: '/breathe',
     cName: 'dropdown-link',
   },
 ];

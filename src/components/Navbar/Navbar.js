@@ -15,11 +15,14 @@ const StyledNav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  z-index: 500;
 `;
 
 const NavLogo = styled(Link)`
   color: #fff;
   justify-self: start;
+  display: flex;
+  align-items: center;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
@@ -33,6 +36,13 @@ const NavLogo = styled(Link)`
   }
 `;
 
+const LogoSpan = styled.span`
+  font-size: 0.8rem;
+  margin-left: 10px;
+  font-family: 'Orbitron', sans-serif;
+  color: #1888ff;
+`;
+
 const NavMenu = styled.ul`
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -42,6 +52,7 @@ const NavMenu = styled.ul`
   width: 70vw;
   justify-content: end;
   margin-right: 2rem;
+  z-index: 500;
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -149,7 +160,9 @@ const Navbar = (props) => {
   return (
     <>
       <StyledNav>
-        <NavLogo to="/">BODYFIX</NavLogo>
+        <NavLogo to="/">
+          Bodyfix<LogoSpan>for programmers</LogoSpan>
+        </NavLogo>
         <div onClick={handleClick}>
           {click ? <BurgerClose /> : <BurgerLines />}
         </div>
@@ -161,7 +174,7 @@ const Navbar = (props) => {
           </NavItem>
           <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             {dropdown && <Dropdown />}
-            <NavLinks arrow={true} to="/excercises" onClick={closeMobileMenu}>
+            <NavLinks arrow="true" to="/excercises" onClick={closeMobileMenu}>
               Ćwiczenia <ArrowDown />
             </NavLinks>
           </NavItem>
