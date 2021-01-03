@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderWraper = styled.div`
-  margin: 20px 0 45px 0px;
+  margin: 20px 0 45px 20px;
 `;
 
 const StyledH3 = styled.h3`

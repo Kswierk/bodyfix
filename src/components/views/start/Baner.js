@@ -31,7 +31,6 @@ const StyledBaner = styled.div`
   background-position: center;
   height: 100%;
   width: 100vw;
-
   @media (min-width: 600px) {
     background-position: left -120px top 50px;
   }

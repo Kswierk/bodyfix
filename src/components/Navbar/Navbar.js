@@ -23,16 +23,16 @@ const NavLogo = styled(Link)`
   justify-self: start;
   display: flex;
   align-items: center;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
 
   @media screen and (max-width: 960px) {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(25%, 50%);
+    /* margin-left: 20px; */
+    transform: translate(25%, 60%);
   }
 `;
 
@@ -75,7 +75,7 @@ const BurgerLines = styled(BiMenuAltLeft)`
   @media screen and (max-width: 960px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
