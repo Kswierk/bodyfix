@@ -38,7 +38,7 @@ const StyledLi = styled.li`
 const HowToStart = () => {
   return (
     <Wraper>
-      <SectionHeader />
+      <SectionHeader text="Dlaczego warto dbać o prawidłową postawę ciała" />
       <StyledParagraph>
         Nie będę zagłębiał się w książkowe definicje za co odpowiedzialne są
         poszczególne części naszego ciała bo prawdopodobnie nie po to tutaj

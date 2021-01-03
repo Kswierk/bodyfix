@@ -4,7 +4,7 @@ import GlobalStyles from './components/globalStyles';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Start from './components/views/start/Start';
-import Excercises from './components/views/Excercises';
+import Excercises from './components/views/excercises/Excercises';
 import Back from './components/views/Back';
 import Legs from './components/views/Legs';
 import Neck from './components/views/Neck';

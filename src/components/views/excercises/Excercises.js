@@ -1,9 +1,10 @@
 import React from 'react';
+import MainHeader from '../../MainHeader';
 
 const Excercises = () => {
   return (
     <div>
-      <p>excercises</p>
+      <MainHeader text="ćwiczenia" />
     </div>
   );
 };
