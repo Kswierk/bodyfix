@@ -43,7 +43,7 @@ const Header = styled.h1`
   }
 `;
 
-const InformationalStart = (props) => {
+const InformationalStart = () => {
   const handleClick = () => {
     let pageHeight = window.innerHeight;
     window.scrollBy(0, pageHeight);

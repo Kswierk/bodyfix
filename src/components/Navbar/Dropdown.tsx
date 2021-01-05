@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { MenuItems } from './MenuItems';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { StyledFunction } from 'styled-components';
 
-const DropdownMenu = styled.ul`
+const DropdownMenu = styled.ul<ClickProps>`
   width: 200px;
   position: absolute;
   top: 80px;
@@ -32,7 +32,11 @@ const DropdownLink = styled(Link)`
   }
 `;
 
-const Dropdown = (props) => {
+interface ClickProps {
+  readonly click: boolean;
+}
+
+const Dropdown = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);

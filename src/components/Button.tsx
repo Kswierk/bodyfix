@@ -16,8 +16,11 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = (props) => {
-  return <StyledButton onClick={props.onClick}>{props.text}</StyledButton>;
+type ClickFn = (ev: React.MouseEvent<HTMLButtonElement>) => void;
+type ButtonProps = { onClick: ClickFn; text: string };
+
+const Button = ({ onClick, text }: ButtonProps) => {
+  return <StyledButton onClick={onClick}>{text}</StyledButton>;
 };
 
 export default Button;

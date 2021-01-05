@@ -52,7 +52,7 @@ const StyledBaner = styled.div`
 const Baner = () => {
   return (
     <Wraper>
-      <StyledBaner src={hero} alt="baner" />
+      <StyledBaner />
     </Wraper>
   );
 };

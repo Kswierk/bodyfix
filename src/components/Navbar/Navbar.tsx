@@ -43,7 +43,7 @@ const LogoSpan = styled.span`
   color: #1888ff;
 `;
 
-const NavMenu = styled.ul`
+const NavMenu = styled.ul<NavMenuProps>`
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
@@ -104,7 +104,7 @@ const NavItem = styled.li`
   height: 80px;
 `;
 
-const NavLinks = styled(Link)`
+const NavLinks = styled(Link)<NavLinksProps>`
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -136,7 +136,21 @@ const ArrowDown = styled(IoMdArrowDropdownCircle)`
   }
 `;
 
-const Navbar = (props) => {
+// interface ClickProps {
+//   readonly click: boolean;
+//   readonly arrow: boolean;
+// }
+
+interface NavLinksProps {
+  readonly arrow?: boolean;
+  readonly to: string;
+  readonly onClick: () => void;
+}
+interface NavMenuProps {
+  readonly click?: boolean;
+}
+
+const Navbar = () => {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
@@ -178,7 +192,7 @@ const Navbar = (props) => {
           </NavItem>
           <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             {dropdown && <Dropdown />}
-            <NavLinks arrow="true" to="/excercises" onClick={closeMobileMenu}>
+            <NavLinks arrow={true} to="/excercises" onClick={closeMobileMenu}>
               Ćwiczenia <ArrowDown />
             </NavLinks>
           </NavItem>

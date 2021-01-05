@@ -2,31 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderWraper = styled.div`
-  text-align: center;
-  margin-top: 80px;
+  margin: 20px 0 45px 20px;
 `;
 
-const StyledH1 = styled.h1`
+const StyledH3 = styled.h3`
   display: inline-block;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.6rem;
 
   &::after {
     display: block;
     content: '';
+    width: 50%;
     height: 2px;
     margin-top: 7px;
     background-color: #1888ff;
   }
 `;
 
-const MainHeader = (props) => {
+type SectionHeaderProps = { text: string };
+
+const SectionHeader = ({ text }: SectionHeaderProps) => {
   return (
     <HeaderWraper>
-      <StyledH1>{props.text}</StyledH1>
+      <StyledH3>{text}</StyledH3>
     </HeaderWraper>
   );
 };
 
-export default MainHeader;
+export default SectionHeader;
