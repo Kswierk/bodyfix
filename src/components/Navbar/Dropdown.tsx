@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MenuItems } from './MenuItems';
 import { Link } from 'react-router-dom';
-import styled, { StyledFunction } from 'styled-components';
+import styled from 'styled-components';
 
 const DropdownMenu = styled.ul<ClickProps>`
   width: 200px;

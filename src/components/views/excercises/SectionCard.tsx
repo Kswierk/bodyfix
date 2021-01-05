@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const SectionCard = () => {
-  return <div></div>;
+  return (
+    <div>
+      <p>siema</p>
+    </div>
+  );
 };
 
 export default SectionCard;

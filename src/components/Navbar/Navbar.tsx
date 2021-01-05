@@ -142,7 +142,7 @@ const ArrowDown = styled(IoMdArrowDropdownCircle)`
 // }
 
 interface NavLinksProps {
-  readonly arrow?: boolean;
+  readonly arrow?: string;
   readonly to: string;
   readonly onClick: () => void;
 }
@@ -192,7 +192,7 @@ const Navbar = () => {
           </NavItem>
           <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             {dropdown && <Dropdown />}
-            <NavLinks arrow={true} to="/excercises" onClick={closeMobileMenu}>
+            <NavLinks arrow="true" to="/excercises" onClick={closeMobileMenu}>
               Ćwiczenia <ArrowDown />
             </NavLinks>
           </NavItem>
