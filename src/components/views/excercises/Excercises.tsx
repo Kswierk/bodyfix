@@ -7,6 +7,7 @@ import { excercisesData } from './data';
 import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -28,19 +29,16 @@ const Excercises = () => {
     <div>
       <MainHeader text="ćwiczenia" />
       <Description />
-      {excercisesData.map((item, index) => {
+      {excercisesData.map((item) => {
         return (
-          <>
-            <StyledLink key={index} to={item.link}>
-              <SectionCard
-                reverse={item.reverse}
-                key={index}
-                text={item.text}
-                img={item.img}
-              />
-            </StyledLink>
-            {/* <VerticalLine /> */}
-          </>
+          <StyledLink key={uuidv4()} to={item.link}>
+            <SectionCard
+              key={uuidv4()}
+              reverse={item.reverse}
+              text={item.text}
+              img={item.img}
+            />
+          </StyledLink>
         );
       })}
     </div>
