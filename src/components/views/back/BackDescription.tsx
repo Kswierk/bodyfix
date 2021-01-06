@@ -18,7 +18,7 @@ const StyledParagraph = styled.p`
   }
 `;
 
-const Description = () => {
+const BackDescription = () => {
   return (
     <Wraper>
       <StyledParagraph>
@@ -37,4 +37,4 @@ const Description = () => {
   );
 };
 
-export default Description;
+export default BackDescription;
