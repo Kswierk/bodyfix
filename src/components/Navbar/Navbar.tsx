@@ -15,7 +15,7 @@ const StyledNav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  z-index: 500;
+  /* z-index: 500; */
 `;
 
 const NavLogo = styled(Link)`
@@ -52,7 +52,7 @@ const NavMenu = styled.ul<NavMenuProps>`
   width: 70vw;
   justify-content: end;
   margin-right: 2rem;
-  z-index: 500;
+  /* z-index: 500; */
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -77,7 +77,7 @@ const BurgerLines = styled(BiMenuAltLeft)`
     position: absolute;
     top: 5px;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 70%);
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -92,7 +92,7 @@ const BurgerClose = styled(IoMdClose)`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 90%);
     font-size: 1.8rem;
     cursor: pointer;
   }
