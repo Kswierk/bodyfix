@@ -21,7 +21,7 @@ const StyledModal = styled.div`
 `;
 
 const ModalWraper = styled.div`
-  margin: 40px 5%;
+  margin: 0 5%;
   padding: 35px 0 35px 0;
 `;
 
