@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import * as actionTypes from '../../../reducers/actions';
 import Modal from '../Modal/Modal';
 import { RootStateTypes } from '../../../reducers/rootReducer';
+import ExcerciseLink from '../ExcerciseLink';
 
 const StyledExcercise = styled.p`
   display: block;
@@ -19,17 +20,20 @@ type Props = {
   onSetExcercise: (val: string) => RootStateTypes;
   onOpenModal: () => RootStateTypes;
   modal: boolean;
+  Excercise: string;
 };
 
 const Back = (props: Props) => {
-  const { onSetExcercise, onOpenModal, modal } = props;
+  // const {  modal } = props;
   return (
     <div>
-      {modal ? <Modal /> : null}
+      {props.modal ? <Modal /> : null}
       <MainHeader text="proste plecy" />
       <BackDescription />
+      <ExcerciseLink name="cat-cow" text="kot pies" />
+      <ExcerciseLink name="drugi" text="drugie cwiczenie" />
 
-      <StyledExcercise
+      {/* <StyledExcercise
         onClick={() => {
           onSetExcercise('cat-cow');
           onOpenModal();
@@ -44,7 +48,7 @@ const Back = (props: Props) => {
         }}
       >
         drugie
-      </StyledExcercise>
+      </StyledExcercise> */}
     </div>
   );
 };
