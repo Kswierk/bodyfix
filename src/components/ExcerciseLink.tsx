@@ -47,15 +47,14 @@ const StyledLi = styled.li`
   list-style: none;
 `;
 
-type Props = {
+interface Props {
   onSetExcercise: (val: string) => RootStateTypes;
   onOpenModal: () => RootStateTypes;
   modal: boolean;
   name: string;
   text: string;
   number: number;
-  children: {};
-};
+}
 
 const ExcerciseLink = (props: Props) => {
   return (

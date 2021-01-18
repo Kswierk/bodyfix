@@ -1,18 +1,13 @@
 import React from 'react';
 import BodyPartView from '../../BodyPartView';
 import { backExcercises } from '../../excercisesData';
-import BackDescription from './BackDescription';
+import BackDescription from '../back/BackDescription';
 
-// interface Iprops {
-//   text: string;
-//   arr: any;
-// }
-
-const BackText = () => {
+const Neck = () => {
   return (
     <div>
       <BodyPartView
-        text="proste plecy"
+        text="zdrowa szyja"
         arr={backExcercises}
         description={BackDescription}
       />
@@ -20,4 +15,4 @@ const BackText = () => {
   );
 };
 
-export default BackText;
+export default Neck;
