@@ -7,48 +7,46 @@ import { connect } from 'react-redux';
 import * as actionTypes from '../../../reducers/actions';
 import Modal from '../Modal/Modal';
 import { RootStateTypes } from '../../../reducers/rootReducer';
-import ExcerciseLink from '../ExcerciseLink';
+import ExcerciseLink from '../../ExcerciseLink';
+// import { excercisesData } from '../excercises/data';
+import { backExcercises } from '../../excercisesData';
 
-const StyledExcercise = styled.p`
-  display: block;
-  margin: 15px auto;
-  text-align: center;
-  cursor: pointer;
+const StyledList = styled.ul`
+  /* display: flex; */
+  width: 100%;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: space-between; */
 `;
 
 type Props = {
   onSetExcercise: (val: string) => RootStateTypes;
   onOpenModal: () => RootStateTypes;
   modal: boolean;
-  Excercise: string;
+  // Excercise: string;
 };
 
 const Back = (props: Props) => {
-  // const {  modal } = props;
+  // const { modal } = props;
   return (
     <div>
       {props.modal ? <Modal /> : null}
       <MainHeader text="proste plecy" />
       <BackDescription />
-      <ExcerciseLink name="cat-cow" text="kot pies" />
-      <ExcerciseLink name="drugi" text="drugie cwiczenie" />
 
-      {/* <StyledExcercise
-        onClick={() => {
-          onSetExcercise('cat-cow');
-          onOpenModal();
-        }}
-      >
-        catcow
-      </StyledExcercise>
-      <StyledExcercise
-        onClick={() => {
-          onSetExcercise('drugi');
-          onOpenModal();
-        }}
-      >
-        drugie
-      </StyledExcercise> */}
+      {backExcercises.map((excercise, index) => {
+        return (
+          <StyledList key={index}>
+            <ExcerciseLink
+              number={index + 1}
+              name={excercise.name}
+              text={excercise.name}
+            >
+              {/* <StyledSpan>{index + 1}</StyledSpan> */}
+            </ExcerciseLink>
+          </StyledList>
+        );
+      })}
     </div>
   );
 };

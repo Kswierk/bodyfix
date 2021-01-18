@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // import back from '../../../assets/images/lowback.png';
 
 const Wraper = styled.div<ReverseType>`
-  max-width: 1200px;
+  max-width: 1000px;
   display: flex;
   flex-direction: ${(props) =>
     props.reverse === 'true' ? 'row' : 'row-reverse'};

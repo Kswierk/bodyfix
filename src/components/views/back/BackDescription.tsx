@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wraper = styled.div`
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 50px auto;
 `;
 
@@ -22,16 +22,13 @@ const BackDescription = () => {
   return (
     <Wraper>
       <StyledParagraph>
-        Wszystkie przedstawione ćwiczenia są dobrane tak, aby były jak
-        najskuteczniejsze, a ich wykonanie zajmowało jak najmniej czasu. Obszar
-        został podzielony na sekcje, aby ewentualnie dobrać pod siebie ćwiczenia
-        w miejscu w którym może występować największy problem. Przykładowo -
-        jeżeli boli cię dolny odcinek pleców możesz dobrać więcej ćwiczeń z
-        kategorii "Proste plecy", lub np. jeżeli zależy Ci na poprawie procesów
-        myślowych poprzez lepsze dotlenienie organizmu wybierz sekcję "Oddech
-        mocy". Każde ćwiczenie wykonujemy na powtórzenia - 20-30 powtórzeń w
-        serii na każdą stronę. Wybierz jedną z poniższych kategorii, aby
-        rozpocząć ćwiczenia.
+        Siedzący tryb życia, zwiększa ryzyko wystąpienia bólu kręgosłupa,
+        zwłaszcza na odcinku lędźwiowym. Jest to spowodowane osłabieniem mięśni
+        brzucha które stabilizują korpus i utrzymują go w pozycji pionowej. W
+        efekcie tego następuje hiperlordoza, która może doprowadzić do
+        uszkodzenia kręgów i tkanek miękkich budujących kręgosłup. Taka sytuacja
+        może doprowadzić do pogorszenia samopoczucia, dużej bolesności i
+        ogólnego pogorszenia sylwetki.
       </StyledParagraph>
     </Wraper>
   );

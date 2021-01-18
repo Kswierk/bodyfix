@@ -10,19 +10,22 @@ import * as actionTypes from '../../../reducers/actions';
 import Iframe from 'react-iframe';
 
 const StyledModal = styled.div`
-  position: relative;
+  position: absolute;
   background-color: #fff;
   width: 85vw;
   max-width: 1200px;
   border-radius: 4px;
   z-index: 200;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const ModalWraper = styled.div`
   margin: 10px 5%;
   padding: 35px 0 35px 0;
+  max-height: 90vh;
+  overflow-y: scroll;
 `;
 
 const StepNumber = styled.p`
@@ -33,7 +36,7 @@ const StepNumber = styled.p`
   width: 30px;
   height: 30px;
   margin: 25px auto;
-  background-color: #ddd;
+  background-color: rgba(239, 239, 239, 1);
 `;
 
 const StyledDescription = styled.p`
