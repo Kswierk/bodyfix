@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import MainHeader from './MainHeader';
-import BackDescription from './views/back/BackDescription';
 import { connect } from 'react-redux';
 import * as actionTypes from '../reducers/actions';
 import Modal from './views/Modal/Modal';
@@ -18,6 +17,22 @@ const StyledList = styled.ul`
   /* justify-content: center; */
   /* align-items: space-between; */
 `;
+const Wraper = styled.div`
+  max-width: 1000px;
+  margin: 50px auto;
+`;
+
+const StyledParagraph = styled.p`
+  line-height: 150%;
+  margin: 0 15px;
+
+  @media (min-width: 600px) {
+    margin: 0 40px;
+  }
+  @media (min-width: 1200px) {
+    margin: 0;
+  }
+`;
 
 interface IProps {
   onSetExcercise: (val: string) => RootStateTypes;
@@ -25,7 +40,7 @@ interface IProps {
   modal: boolean;
   text: string;
   arr: any;
-  description: () => JSX.Element;
+  description: string;
 }
 
 interface IExcercise {
@@ -40,8 +55,10 @@ const BodyPart = (props: IProps) => {
     <div>
       {modal ? <Modal /> : null}
       <MainHeader text={text} />
-      <BackDescription />
-      {description}
+      {/* <BackDescription /> */}
+      <Wraper>
+        <StyledParagraph>{description}</StyledParagraph>
+      </Wraper>
 
       {arr.map((excercise: IExcercise, index: number) => {
         return (

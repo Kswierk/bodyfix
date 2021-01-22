@@ -1,18 +1,18 @@
 import React from 'react';
 import BodyPartView from '../../BodyPartView';
 import { backExcercises } from '../../excercisesData';
-import { neckText } from '../../excercisesDescriptionData';
+import { legsText } from '../../excercisesDescriptionData';
 
-const Neck = () => {
+const Legs = () => {
   return (
     <div>
       <BodyPartView
-        text="zdrowa szyja"
+        text="sprawne nogi"
         arr={backExcercises}
-        description={neckText}
+        description={legsText}
       />
     </div>
   );
 };
 
-export default Neck;
+export default Legs;

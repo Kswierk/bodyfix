@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Start from './components/views/start/Start';
 import Excercises from './components/views/excercises/Excercises';
 import BackText from './components/views/back/Back';
-import Legs from './components/views/Legs';
+import Legs from './components/views/legs/Legs';
 import Neck from './components/views/Neck/Neck';
 import Breath from './components/views/Breath';
 import Draw from './components/views/Draw';

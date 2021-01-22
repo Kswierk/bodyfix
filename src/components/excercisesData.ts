@@ -82,15 +82,4 @@ export const backExcercises = [
     ],
     link: '#',
   },
-  //   {
-  //     name: 'przysiad na butle',
-  //     description: [
-  //       {
-  //         one: 'krok pierwszy',
-  //         two: 'krok drugi',
-  //         three: 'krok trzeci',
-  //       },
-  //     ],
-  //     link: '#',
-  //   },
 ];

@@ -8,7 +8,7 @@ const StyledSpan = styled.span`
   margin: 0 3vw 0 15px;
   margin-right: 3vw;
   /* display: inline-block; */
-  height: 3px;
+  height: 2px;
   width: 2px;
   background-color: black;
   transition: 0.3s ease;
@@ -53,7 +53,7 @@ interface Props {
   modal: boolean;
   name: string;
   text: string;
-  number: number;
+  number?: number;
 }
 
 const ExcerciseLink = (props: Props) => {
@@ -82,4 +82,7 @@ const mapStateToProps = (state: RootStateTypes) => ({
   modal: state.openModal,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ExcerciseLink);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ExcerciseLink);

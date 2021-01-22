@@ -1,7 +1,7 @@
 import React from 'react';
 import BodyPartView from '../../BodyPartView';
 import { backExcercises } from '../../excercisesData';
-import BackDescription from './BackDescription';
+import { backText } from '../../excercisesDescriptionData';
 
 // interface Iprops {
 //   text: string;
@@ -14,7 +14,7 @@ const BackText = () => {
       <BodyPartView
         text="proste plecy"
         arr={backExcercises}
-        description={BackDescription}
+        description={backText}
       />
     </div>
   );
