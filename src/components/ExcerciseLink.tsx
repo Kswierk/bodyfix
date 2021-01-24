@@ -30,16 +30,17 @@ const StyledExcercise = styled.div`
   border-radius: 10px;
   margin: 10px auto;
   padding: 10px;
-  height: 35px;
+  min-height: 45px;
   width: 50vw;
 
   &:hover ${StyledSpan} {
-    height: 25px;
+    width: 25px;
+    /* height: 2px; */
     background-color: #1888ff;
   }
 
   @media (min-width: 960px) {
-    width: 390px;
+    width: 440px;
   }
 `;
 

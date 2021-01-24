@@ -3,7 +3,7 @@ import ExcerciseLink from '../ExcerciseLink';
 import { RootStateTypes } from '../../reducers/rootReducer';
 import * as actionTypes from '../../reducers/actions';
 import Modal from '../views/Modal/Modal';
-import { backExcercises } from '../excercisesData';
+import { backExcercises, legsExcercises } from '../excercisesData';
 
 import { connect } from 'react-redux';
 import { excercisesData } from './excercises/data';
@@ -13,7 +13,6 @@ interface IProps {
 const Draw = (props: IProps) => {
   //getonerandom element
 
-  console.log(backExcercises.length);
   const getRandomArbitrary = (
     min: number = 0,
     max: number
@@ -26,8 +25,12 @@ const Draw = (props: IProps) => {
   );
   const randomBackExcercise =
     backExcercises[randomBackExcerciseIndex].name;
-
-  console.log(randomBackExcercise);
+  const randomLegsExcerciseIndex: number = getRandomArbitrary(
+    0,
+    legsExcercises.length - 1
+  );
+  const randomLegsExcercise =
+    legsExcercises[randomLegsExcerciseIndex].name;
 
   const { modal } = props;
   return (
@@ -38,6 +41,10 @@ const Draw = (props: IProps) => {
       <ExcerciseLink
         name={randomBackExcercise}
         text={randomBackExcercise}
+      />
+      <ExcerciseLink
+        name={randomLegsExcercise}
+        text={randomLegsExcercise}
       />
     </div>
   );

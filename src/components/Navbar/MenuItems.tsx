@@ -15,7 +15,7 @@ export const MenuItems = [
     cName: 'dropdown-link',
   },
   {
-    title: `Oddech mocy`,
+    title: `Prawidłowy oddech`,
     path: '/breathe',
     cName: 'dropdown-link',
   },

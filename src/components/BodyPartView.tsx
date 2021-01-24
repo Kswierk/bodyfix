@@ -43,7 +43,7 @@ interface IProps {
   description: string;
 }
 
-interface IExcercise {
+interface IExcercises {
   name: string;
   description: string;
   link: string;
@@ -60,7 +60,7 @@ const BodyPart = (props: IProps) => {
         <StyledParagraph>{description}</StyledParagraph>
       </Wraper>
 
-      {arr.map((excercise: IExcercise, index: number) => {
+      {arr.map((excercise: IExcercises, index: number) => {
         return (
           <StyledList key={index}>
             <ExcerciseLink

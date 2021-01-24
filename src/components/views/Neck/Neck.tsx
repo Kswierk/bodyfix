@@ -1,6 +1,6 @@
 import React from 'react';
 import BodyPartView from '../../BodyPartView';
-import { backExcercises } from '../../excercisesData';
+import { neckExcercises } from '../../excercisesData';
 import { neckText } from '../../excercisesDescriptionData';
 
 const Neck = () => {
@@ -8,7 +8,7 @@ const Neck = () => {
     <div>
       <BodyPartView
         text="zdrowa szyja"
-        arr={backExcercises}
+        arr={neckExcercises}
         description={neckText}
       />
     </div>

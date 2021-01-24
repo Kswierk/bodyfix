@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Backdrop from './Backdrop';
 
-import { backExcercises } from '../../excercisesData';
+import { allExcercises } from '../../excercisesData';
 import { connect } from 'react-redux';
 import { RootStateTypes } from '../../../reducers/rootReducer';
 import { CgClose } from 'react-icons/cg';
@@ -69,31 +69,25 @@ type Props = {
 
 const Modal = (props: Props) => {
   const { modalExcercise, onCloseModal } = props;
-  const foundIndex = backExcercises.findIndex(
-    (item) => item.name === modalExcercise
+  const foundIndex = allExcercises.findIndex(
+    (item: any) => item.name === modalExcercise
   );
-  // <iframe
-  //   width="560"
-  //   height="315"
-  //   src="https://www.youtube.com/embed/r9HdJ8P6GQI"
-  //   frameborder="0"
-  //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  //   allowfullscreen
-  // ></iframe>;
 
   return (
     <>
       <StyledModal>
         <ModalWraper>
           <ExitButton onClick={onCloseModal} />
-          <StyledVideo url={backExcercises[foundIndex].link} />
+          <StyledVideo url={allExcercises[foundIndex].link} />
 
-          {backExcercises[foundIndex].description.map((item, index) => (
-            <div key={index}>
-              <StepNumber>{index + 1}</StepNumber>
-              <StyledDescription>{item}</StyledDescription>
-            </div>
-          ))}
+          {allExcercises[foundIndex].description.map(
+            (item: string, index: number) => (
+              <div key={index}>
+                <StepNumber>{index + 1}</StepNumber>
+                <StyledDescription>{item}</StyledDescription>
+              </div>
+            )
+          )}
         </ModalWraper>
       </StyledModal>
       <Backdrop />
