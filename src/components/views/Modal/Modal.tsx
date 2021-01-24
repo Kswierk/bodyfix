@@ -41,6 +41,7 @@ const StepNumber = styled.p`
 
 const StyledDescription = styled.p`
   text-align: center;
+  line-height: 2rem;
 `;
 
 const ExitButton = styled(CgClose)`
