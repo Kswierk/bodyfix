@@ -11,22 +11,22 @@ const GlobalStyle = createGlobalStyle`
    html{
      scroll-behavior: smooth;
    }
-   `;
+  ;
 
-/* body{
-background: linear-gradient(0deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 70%);
-background-repeat: no-repeat;
+body{
+/* background: linear-gradient(0deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 70%); */
+/* background-repeat: no-repeat; */
 
     overflow-x: hidden;
-      @media(min-width: 960px){
+      /* @media(min-width: 960px){
 
       background: linear-gradient(
       90deg,
       rgba(239, 239, 239, 1) 0%,
       rgba(255, 255, 255, 1) 50%
     );
-      }
+      } */
     }
-`; */
+`;
 
 export default GlobalStyle;
