@@ -2,10 +2,11 @@ import React from 'react';
 import SectionHeader from '../../SectionHeader';
 
 import styled from 'styled-components';
+import HowToSit from './HowToSit';
 
 const Wraper = styled.div`
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
 `;
 
 const StyledParagraph = styled.p`
@@ -83,10 +84,10 @@ const HowToStart = () => {
         szerokości na rozpiętość ramion. Nie przedłużając - zachęcam
         do przeczytania dokładniejszych informacji w każdej z sekcji.
         Jeżeli jednak chciałbyś odrazu przejść do ćwiczeń wystaczy
-        wylosować swój zestaw ćwiczeń obejmujący całe ciało.
-        Powodzenia!
+        kliknąć w sekcję Wylosuj dzisiejsze ćwiczenia na nawigacji.
       </StyledParagraph>
       <SectionHeader text="Jak poprawnie siedzieć przy biurku?" />
+      <HowToSit />
       <StyledParagraph>
         Zacznijmy od sprawy elementarnej – jaką właściwie powinno się
         przybrać postawę siedząc przez wiele godzin przed komputerem?

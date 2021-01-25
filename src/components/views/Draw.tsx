@@ -3,13 +3,34 @@ import ExcerciseLink from '../ExcerciseLink';
 import { RootStateTypes } from '../../reducers/rootReducer';
 import * as actionTypes from '../../reducers/actions';
 import Modal from '../views/Modal/Modal';
-import { backExcercises, legsExcercises } from '../excercisesData';
+import {
+  backExcercises,
+  legsExcercises,
+  neckExcercises,
+} from '../excercisesData';
 
 import { connect } from 'react-redux';
-import { excercisesData } from './excercises/data';
+import styled from 'styled-components';
 interface IProps {
   modal: boolean;
 }
+
+const Wraper = styled.div`
+  max-width: 1000px;
+  margin: 50px auto;
+`;
+
+const StyledParagraph = styled.p`
+  line-height: 150%;
+  margin: 0 15px;
+
+  @media (min-width: 600px) {
+    margin: 0 40px;
+  }
+  @media (min-width: 1200px) {
+    margin: 0;
+  }
+`;
 const Draw = (props: IProps) => {
   //getonerandom element
 
@@ -25,6 +46,7 @@ const Draw = (props: IProps) => {
   );
   const randomBackExcercise =
     backExcercises[randomBackExcerciseIndex].name;
+
   const randomLegsExcerciseIndex: number = getRandomArbitrary(
     0,
     legsExcercises.length - 1
@@ -32,12 +54,27 @@ const Draw = (props: IProps) => {
   const randomLegsExcercise =
     legsExcercises[randomLegsExcerciseIndex].name;
 
+  const randomNeckExcerciseIndex: number = getRandomArbitrary(
+    0,
+    neckExcercises.length - 1
+  );
+  const randomNeckExcercise =
+    neckExcercises[randomNeckExcerciseIndex].name;
+
   const { modal } = props;
   return (
-    <div>
-      {modal ? <Modal /> : null}
+    <>
+      <Wraper>
+        {modal ? <Modal /> : null}
 
-      <p>draw</p>
+        <StyledParagraph>
+          Poniżej wylosowane zostało dla Ciebie po jednym ćwiczeniu na
+          każdą z kluczowych grup mięsniowych. Jeżeli chcec wylosować
+          ćwiczenia jeszcze raz - kliknij ponownie w sekcję 'Wylosuj
+          dzisiejsze ćwiczenia'
+        </StyledParagraph>
+      </Wraper>
+
       <ExcerciseLink
         name={randomBackExcercise}
         text={randomBackExcercise}
@@ -46,7 +83,11 @@ const Draw = (props: IProps) => {
         name={randomLegsExcercise}
         text={randomLegsExcercise}
       />
-    </div>
+      <ExcerciseLink
+        name={randomNeckExcercise}
+        text={randomNeckExcercise}
+      />
+    </>
   );
 };
 

@@ -11,8 +11,9 @@ const GlobalStyle = createGlobalStyle`
    html{
      scroll-behavior: smooth;
    }
+   `;
 
-    body{
+/* body{
 background: linear-gradient(0deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 70%);
 background-repeat: no-repeat;
 
@@ -26,6 +27,6 @@ background-repeat: no-repeat;
     );
       }
     }
-`;
+`; */
 
 export default GlobalStyle;
