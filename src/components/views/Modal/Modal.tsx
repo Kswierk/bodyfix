@@ -64,14 +64,21 @@ const StyledVideo = styled(Iframe)`
 `;
 
 type Props = {
-  modalExcercise?: string | null;
-  onCloseModal?: () => void;
+  modalExcercise: string | null;
+  onCloseModal: () => void;
 };
+
+interface IItem {
+  name: string;
+  description: string[];
+  link: string;
+}
 
 const Modal = (props: Props) => {
   const { modalExcercise, onCloseModal } = props;
+
   const foundIndex = allExcercises.findIndex(
-    (item: any) => item.name === modalExcercise
+    (item: IItem) => item.name === modalExcercise
   );
 
   useEffect(() => {
