@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Backdrop from './Backdrop';
 
@@ -73,6 +73,10 @@ const Modal = (props: Props) => {
   const foundIndex = allExcercises.findIndex(
     (item: any) => item.name === modalExcercise
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
