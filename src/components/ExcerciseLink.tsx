@@ -40,7 +40,8 @@ const StyledExcercise = styled.div`
   }
 
   @media (min-width: 960px) {
-    width: 440px;
+    /* width: 440px; */
+    max-width: 1200px;
   }
 `;
 
