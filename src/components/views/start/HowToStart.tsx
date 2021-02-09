@@ -17,7 +17,7 @@ const StyledParagraph = styled.p`
 
 const StyledList = styled.ul`
   list-style: none;
-  margin: 15px 40px;
+  margin: 35px 40px;
 `;
 
 const StyledLi = styled.li`
