@@ -45,10 +45,10 @@ const StyledDescription = styled.p`
 `;
 
 const ExitButton = styled(CgClose)`
-  font-size: 35px;
-  position: absolute;
-  right: 22px;
-  top: 22px;
+  font-size: 40px;
+  position: relative;
+  left: 70vw;
+  /* top: 22px; */
   cursor: pointer;
 `;
 
