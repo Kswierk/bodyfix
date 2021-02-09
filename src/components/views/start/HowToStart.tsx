@@ -11,7 +11,7 @@ const Wraper = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-  margin: 0 40px;
+  margin: 0 20px;
   line-height: 150%;
 `;
 
