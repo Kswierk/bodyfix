@@ -9,7 +9,7 @@ export const backExcercises = [
       'Wytrzymaj w pozycji od 2-3 sekundy, następnie wróć do pozycji wyjściowej.',
       'Powtórz czynność 10-15 razy',
     ],
-    link: 'https://youtu.be/mU1iRLuVpPw?t=13',
+    link: 'https://www.youtube.com/embed/KpNznspZZEY?start=27',
   },
   {
     name: 'Y-raises',
@@ -138,7 +138,7 @@ export const legsExcercises = [
     link: 'https://www.youtube.com/embed/K4VatsZg2qk?start=187',
   },
   {
-    name: 'Rozciąganie biodra',
+    name: 'Rozciąganie gołębie',
     description: [
       'Zacznij z pozycji klęku podpartego',
       'Powoli przenieś prawe kolano w kierunku prawego kolana.',
@@ -213,7 +213,7 @@ export const allExcercises = [
       'Wytrzymaj w pozycji od 2-3 sekundy, następnie wróć do pozycji wyjściowej.',
       'Powtórz czynność 10-15 razy',
     ],
-    link: 'https://youtu.be/mU1iRLuVpPw?t=13',
+    link: 'https://www.youtube.com/embed/KpNznspZZEY?start=27',
   },
   {
     name: 'Y-raises',
@@ -340,7 +340,7 @@ export const allExcercises = [
     link: 'https://www.youtube.com/embed/K4VatsZg2qk?start=187',
   },
   {
-    name: 'Rozciąganie biodra',
+    name: 'Rozciąganie gołębie',
     description: [
       'Zacznij z pozycji klęku podpartego',
       'Powoli przenieś prawe kolano w kierunku prawego kolana.',
