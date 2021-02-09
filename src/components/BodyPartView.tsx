@@ -10,12 +10,15 @@ import ExcerciseLink from './ExcerciseLink';
 // import { excercisesData } from '../excercises/data';
 // import { backExcercises } from './excercisesData';
 
-const StyledList = styled.ul`
+const StyledLink = styled.li`
   /* display: flex; */
   width: 100%;
   /* flex-direction: column; */
   /* justify-content: center; */
   /* align-items: space-between; */
+`;
+const StyledList = styled.ul`
+  margin-bottom: 50px;
 `;
 const Wraper = styled.div`
   max-width: 1000px;
@@ -59,18 +62,19 @@ const BodyPart = (props: IProps) => {
       <Wraper>
         <StyledParagraph>{description}</StyledParagraph>
       </Wraper>
-
-      {arr.map((excercise: IExcercises, index: number) => {
-        return (
-          <StyledList key={index}>
-            <ExcerciseLink
-              number={index + 1}
-              name={excercise.name}
-              text={excercise['name']}
-            ></ExcerciseLink>
-          </StyledList>
-        );
-      })}
+      <StyledList>
+        {arr.map((excercise: IExcercises, index: number) => {
+          return (
+            <StyledLink key={index}>
+              <ExcerciseLink
+                number={index + 1}
+                name={excercise.name}
+                text={excercise['name']}
+              ></ExcerciseLink>
+            </StyledLink>
+          );
+        })}
+      </StyledList>
     </div>
   );
 };

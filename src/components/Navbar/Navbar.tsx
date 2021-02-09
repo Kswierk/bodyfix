@@ -9,7 +9,11 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(28, 27, 27) 0%,
+    rgb(26, 23, 23) 100%
+  );
   height: 80px;
   display: flex;
   justify-content: center;
@@ -30,7 +34,7 @@ const NavLogo = styled(Link)`
   @media screen and (max-width: 960px) {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -10px;
     /* margin-left: 20px; */
     transform: translate(25%, 60%);
   }
@@ -52,7 +56,7 @@ const NavMenu = styled.ul<NavMenuProps>`
   width: 70vw;
   justify-content: end;
   margin-right: 2rem;
-  /* z-index: 500; */
+  z-index: 500;
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -64,7 +68,8 @@ const NavMenu = styled.ul<NavMenuProps>`
     left: ${(props) => (props.click ? '0' : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
-    background: ${(props) => (props.click ? '#242222' : 'transparent')};
+    background: ${(props) =>
+      props.click ? '#242222' : 'transparent'};
   }
 `;
 
@@ -190,9 +195,16 @@ const Navbar = () => {
               Tutaj zacznij
             </NavLinks>
           </NavItem>
-          <NavItem onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+          <NavItem
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
             {dropdown && <Dropdown />}
-            <NavLinks arrow="true" to="/excercises" onClick={closeMobileMenu}>
+            <NavLinks
+              arrow="true"
+              to="/excercises"
+              onClick={closeMobileMenu}
+            >
               Ćwiczenia <ArrowDown />
             </NavLinks>
           </NavItem>

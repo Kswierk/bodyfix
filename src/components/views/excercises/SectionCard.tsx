@@ -50,9 +50,11 @@ const ImgDescription = styled.p`
   z-index: 10;
   position: absolute;
   font-size: 1.5rem;
-  background-color: rgba(120, 120, 120, 0.7);
+  background-color: rgba(24, 136, 255, 0.7);
   padding: 1rem 2rem;
   border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
 
   @media (min-width: 600px) {
     display: none;
@@ -84,7 +86,7 @@ const SectionCard = ({ text, img, reverse }: CardTypes) => {
         <Paragraph>{text}</Paragraph>
       </ParaWraper>
       <ImgWraper>
-        <ImgDescription>proste plecy</ImgDescription>
+        <ImgDescription>{text}</ImgDescription>
         <Img src={img} alt="back" />
       </ImgWraper>
     </Wraper>

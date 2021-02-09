@@ -12,11 +12,6 @@ const StyledSpan = styled.span`
   width: 2px;
   background-color: black;
   transition: 0.3s ease;
-
-  @media (min-width: 960px) {
-    margin-right: 100px;
-    margin: 0 100px 0 40px;
-  }
 `;
 
 const StyledExcercise = styled.div`
@@ -28,10 +23,10 @@ const StyledExcercise = styled.div`
   /* display: inline-block; */
   background-color: rgba(239, 239, 239, 1);
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 15px auto;
   padding: 10px;
   min-height: 45px;
-  width: 50vw;
+  width: 70vw;
 
   &:hover ${StyledSpan} {
     width: 25px;
@@ -40,13 +35,13 @@ const StyledExcercise = styled.div`
   }
 
   @media (min-width: 960px) {
-    /* width: 440px; */
+    width: 700px;
     max-width: 1200px;
   }
 `;
 
-const StyledLi = styled.li`
-  list-style: none;
+const StyledLi = styled.p`
+  /* list-style: none; */
 `;
 
 interface Props {
