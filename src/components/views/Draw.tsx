@@ -69,7 +69,7 @@ const Draw = (props: IProps) => {
 
         <StyledParagraph>
           Poniżej wylosowane zostało dla Ciebie po jednym ćwiczeniu na
-          każdą z kluczowych grup mięsniowych. Jeżeli chcec wylosować
+          każdą z kluczowych grup mięsniowych. Jeżeli chcesz wylosować
           ćwiczenia jeszcze raz - kliknij ponownie w sekcję 'Wylosuj
           dzisiejsze ćwiczenia'
         </StyledParagraph>
