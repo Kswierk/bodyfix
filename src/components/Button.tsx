@@ -17,6 +17,7 @@ const StyledButton = styled.button`
 `;
 
 type ClickFn = (ev: React.MouseEvent<HTMLButtonElement>) => void;
+
 type ButtonProps = { onClick: ClickFn; text: string };
 
 const Button = ({ onClick, text }: ButtonProps) => {

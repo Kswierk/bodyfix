@@ -44,17 +44,21 @@ const Header = styled.h1`
 `;
 
 const InformationalStart = () => {
+  const ref = document.getElementById('informationalRef');
+
   const handleClick = () => {
-    let pageHeight = window.innerHeight;
-    window.scrollBy(0, pageHeight);
+    ref?.scrollIntoView();
   };
   return (
     <InformationalWraper>
       <Header>
-        Sprawność fizyczna jest jednym z najważniejszych kluczy do dynamicznej i
-        twórczej aktywności intelektualnej.
+        Sprawność fizyczna jest jednym z najważniejszych kluczy do
+        dynamicznej i twórczej aktywności intelektualnej.
       </Header>
-      <Button onClick={handleClick} text="Zacznij efektywniej pracować" />
+      <Button
+        onClick={handleClick}
+        text="Zacznij efektywniej pracować"
+      />
     </InformationalWraper>
   );
 };

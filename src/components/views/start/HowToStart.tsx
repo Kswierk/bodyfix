@@ -7,6 +7,7 @@ import HowToSit from './HowToSit';
 const Wraper = styled.div`
   max-width: 1200px;
   margin: 0 auto 50px auto;
+  padding-top: 30px;
 `;
 
 const StyledParagraph = styled.p`
@@ -38,7 +39,7 @@ const StyledLi = styled.li`
 
 const HowToStart = () => {
   return (
-    <Wraper>
+    <Wraper id="informationalRef">
       <SectionHeader text="Dlaczego warto dbać o prawidłową postawę ciała" />
       <StyledParagraph>
         Nie będę zagłębiał się w książkowe definicje za co
