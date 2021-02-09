@@ -17,6 +17,7 @@ const StyledH1 = styled.h1`
     content: '';
     height: 2px;
     margin-top: 7px;
+    /* width: 50%; */
     background-color: #1888ff;
   }
 `;

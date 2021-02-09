@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 // import { useInterval } from '../../../hooks/useInterval';
 
@@ -146,6 +146,10 @@ interface BreathProps {
 }
 
 const Breath = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [text, setText] = useState('START');
   const [shouldAnimate, setShouldAnimate] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
@@ -181,7 +185,7 @@ const Breath = () => {
 
   return (
     <OuterWraper>
-      <MainHeader text="prawidłowy oddech" />
+      <MainHeader text="oddech" />
       <Wraper>
         <StyledParagraph>{breatheText}</StyledParagraph>
         <CircleWraper animate={shouldAnimate}>

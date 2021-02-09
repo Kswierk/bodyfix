@@ -21,8 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 body{
-/* background: linear-gradient(0deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 70%); */
-/* background-repeat: no-repeat; */
+
 overflow-y: ${(props: any) =>
   props.isModalOpen ? 'hidden' : 'visible'};
 

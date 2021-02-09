@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BodyPartView from '../../BodyPartView';
 import { backExcercises } from '../../excercisesData';
 import { backText } from '../../excercisesDescriptionData';
@@ -9,6 +9,9 @@ import { backText } from '../../excercisesDescriptionData';
 // }
 
 const BackText = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <BodyPartView

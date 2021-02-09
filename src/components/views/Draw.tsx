@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ExcerciseLink from '../ExcerciseLink';
 import { RootStateTypes } from '../../reducers/rootReducer';
 import * as actionTypes from '../../reducers/actions';
@@ -32,6 +32,9 @@ const StyledParagraph = styled.p`
   }
 `;
 const Draw = (props: IProps) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   //getonerandom element
 
   const getRandomArbitrary = (
