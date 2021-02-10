@@ -47,8 +47,13 @@ const StyledDescription = styled.p`
 const ExitButton = styled(CgClose)`
   font-size: 40px;
   position: relative;
-  left: 65vw;
+  /* left: 65vw; */
   cursor: pointer;
+`;
+const FlexContainer = styled.div`
+  display: flex;
+  width: 96%;
+  justify-content: space-between;
 `;
 
 const StyledVideo = styled(Iframe)`
@@ -88,7 +93,10 @@ const Modal = (props: Props) => {
     <>
       <StyledModal>
         <ModalWraper>
-          <ExitButton onClick={onCloseModal} />
+          <FlexContainer>
+            <span></span>
+            <ExitButton onClick={onCloseModal}></ExitButton>
+          </FlexContainer>
           <StyledVideo url={allExcercises[foundIndex].link} />
 
           {allExcercises[foundIndex].description.map(
