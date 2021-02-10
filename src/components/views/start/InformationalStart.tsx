@@ -4,7 +4,7 @@ import Button from '../../Button';
 
 const InformationalWraper = styled.div`
   position: relative;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
   /* top: -250px; */
   margin: 0 10px;
 
@@ -24,6 +24,7 @@ const Header = styled.h1`
   background-color: rgba(239, 239, 239, 0.7);
   padding: 10px;
   border-radius: 10px;
+  line-height: 1.7rem;
 
   @media (min-width: 500px) {
     width: 90%;

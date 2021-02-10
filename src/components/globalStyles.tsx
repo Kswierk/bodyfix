@@ -21,11 +21,8 @@ const GlobalStyle = createGlobalStyle`
 
 
 body{
-
 overflow-y: ${(props: any) =>
   props.isModalOpen ? 'hidden' : 'visible'};
-
-
     overflow-x: hidden;
 }
 `;
