@@ -10,7 +10,10 @@ const Wraper = styled.div`
   text-align: center;
   align-items: center;
   height: calc(100vh - 80px);
-  margin-top: 100px;
+  /* height: calc(90vh - 80px); */
+  /* margin-top: 150px; */
+  /* top: 70px; */
+  /* position: relative; */
 
   @media (min-width: 410px) {
     margin-top: 50px;
@@ -20,6 +23,8 @@ const Wraper = styled.div`
     flex-direction: row;
     text-align: initial;
     margin-top: 0;
+    height: calc(100vh - 80px);
+
     /* background: linear-gradient(
       90deg,
       rgba(239, 239, 239, 1) 0%,

@@ -4,8 +4,8 @@ import Button from '../../Button';
 
 const InformationalWraper = styled.div`
   position: relative;
-  /* transform: translateY(-50%); */
-  top: -250px;
+  transform: translateY(-50%);
+  /* top: -250px; */
   margin: 0 10px;
 
   @media (min-width: 600px) {
@@ -14,6 +14,9 @@ const InformationalWraper = styled.div`
   @media (min-width: 960px) {
     position: initial;
     margin-left: 80px;
+  }
+  @media (max-height: 600px) {
+    position: initial;
   }
 `;
 const Header = styled.h1`
@@ -44,10 +47,10 @@ const Header = styled.h1`
 `;
 
 const InformationalStart = () => {
-  const ref = document.getElementById('informationalRef');
+  const ref = document.getElementById('end');
 
   const handleClick = () => {
-    ref?.scrollIntoView();
+    ref?.scrollIntoView({ behavior: 'smooth', block: 'end' });
   };
   return (
     <InformationalWraper>
