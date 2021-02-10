@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../../Button';
+import { Link } from 'react-router-dom';
 
 const InformationalWraper = styled.div`
   position: relative;
-  transform: translateY(-70%);
+  transform: translateY(-75%);
   /* top: -250px; */
   margin: 0 10px;
 
@@ -14,6 +15,7 @@ const InformationalWraper = styled.div`
   @media (min-width: 960px) {
     position: initial;
     margin-left: 80px;
+    transform: none;
   }
   @media (max-height: 600px) {
     position: initial;
@@ -24,7 +26,7 @@ const Header = styled.h1`
   background-color: rgba(239, 239, 239, 0.7);
   padding: 10px;
   border-radius: 10px;
-  line-height: 1.7rem;
+  /* line-height: 1.7rem; */
 
   @media (min-width: 500px) {
     width: 90%;
@@ -48,21 +50,15 @@ const Header = styled.h1`
 `;
 
 const InformationalStart = () => {
-  const ref = document.getElementById('end');
-
-  const handleClick = () => {
-    ref?.scrollIntoView({ behavior: 'smooth', block: 'end' });
-  };
   return (
     <InformationalWraper>
       <Header>
         Sprawność fizyczna jest jednym z najważniejszych kluczy do
         dynamicznej i twórczej aktywności intelektualnej.
       </Header>
-      <Button
-        onClick={handleClick}
-        text="Zacznij efektywniej pracować"
-      />
+      <Link to="excercises">
+        <Button text="Zacznij efektywniej pracować" />
+      </Link>
     </InformationalWraper>
   );
 };

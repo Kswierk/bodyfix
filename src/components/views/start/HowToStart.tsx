@@ -37,9 +37,9 @@ const StyledLi = styled.li`
   }
 `;
 
-const HowToStart = () => {
+const HowToStart = (props: any) => {
   return (
-    <Wraper id="informationalRef">
+    <Wraper id={props.id}>
       <SectionHeader text="Dlaczego warto dbać o prawidłową postawę ciała" />
       <StyledParagraph>
         Nie będę zagłębiał się w książkowe definicje za co

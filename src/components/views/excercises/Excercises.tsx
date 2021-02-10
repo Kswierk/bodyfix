@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MainHeader from '../../MainHeader';
 import Description from './Description';
 import SectionCard from './SectionCard';
@@ -25,6 +25,10 @@ const StyledLink = styled(Link)`
 // `;
 
 const Excercises = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <MainHeader text="ćwiczenia" />

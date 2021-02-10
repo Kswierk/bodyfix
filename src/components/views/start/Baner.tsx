@@ -32,15 +32,18 @@ const StyledBaner = styled.div`
   height: 100%;
   width: 100vw;
   @media (min-width: 600px) {
-    background-position: left -120px top 50px;
+    /* background-position: left -120px top 50px; */
   }
   @media (min-width: 780px) {
-    background-position: center top 50px;
+    width: 80vw;
+    margin: 0 auto;
+    background-position: center top;
   }
   @media (min-width: 960px) {
-    /* background-position: left top 50px; */
+    margin: 0;
+    background-position: left top 50px;
     position: absolute;
-    width: 80vw;
+    width: 75vw;
     right: 0;
     border-radius: 150px 0 0 250px;
   }

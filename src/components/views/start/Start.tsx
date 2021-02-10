@@ -45,7 +45,7 @@ const Start = () => {
         <InformationalStart />
         <Baner />
       </Wraper>
-      <HowToStart />
+      <HowToStart id="informationalRef" />
     </>
   );
 };
